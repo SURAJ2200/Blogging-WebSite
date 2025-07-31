@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="navbar-left">
+    <img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png" alt="Blog Icon" class="nav-icon" />
+    <span class="brand-name">Blogger</span>
+  </div>
+  <div class="navbar-right">
+    <a href="http://localhost:4000/posts/new">  <button class="create-btn">Create Your Blog</button></a> 
+  </div>
+</nav>
+   <h1>This is a Blogging Site</h1>
+<% for(post of posts){ %>
+  <div class="post">
+    <h3 class="user">@<%= post.username || post.author %></h3>
+    <h4 class="content">Title: <%= post.title %></h4>
+    <h4 class="content">Author: <%= post.author %></h4>
+    <div class="content-wrapper">
+    <p class="post-content"><%= post.content %></p>
+    <button class="see-more-btn">See more...</button>
+  </div>
+    <h4 class="content">Tags: <%= post.tags %></h4>
+    <h4 class="content">Likes: <%= post.likes %></h4>
+    <div class="post-actions">
+           <a href="http://localhost:4000/posts/<%=post.id%>" class="btn view-btn">🔍 Details</a>
+   <a href="http://localhost:4000/posts/<%=post.id%>/edit" class="btn edit-btn">✏️ Edit</a>
+      <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="delete-form">
+        <button class="btn delete-btn" onclick="return confirm('Delete this post?')">🗑️ Delete</button>
+      </form>
+    </div>
+  </div>
+<% } %>
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".see-more-btn");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.previousElementSibling;
+        content.classList.toggle("expanded");
+
+        btn.textContent = content.classList.contains("expanded")
+          ? "See less..."
+          : "See more...";
+      });
+    });
+  });
+</script>
+
+
+
+    
+</body>
+</html>

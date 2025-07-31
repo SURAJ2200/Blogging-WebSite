@@ -1,0 +1,365 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-top: 70px;
+
+  min-height: 100vh;  
+  width: 100vw;        
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: 
+   
+     url('/aaron.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+
+.navbar {
+  width: 100vw; 
+  height: 70px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   background: linear-gradient(90deg, #ffffff, #f2f3f5, #e8e8e8, #f7f1e3);
+  color: rgb(41, 39, 39);
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.create-btn {
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #ff3e1d;
+}
+
+
+
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #6db9d2;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.post {
+  width: 90%;
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+}
+
+
+.user {
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+
+.post-content {
+  max-height: 5.7em; /* show 3 lines (approx) */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.post-content.expanded {
+  max-height: none;
+}
+
+.see-more-btn {
+  background-color: transparent;
+  color: #3498db;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  padding: 0;
+  text-align: left;
+}
+
+
+
+.content:nth-child(5) {
+  color: #8e44ad;
+  font-style: italic;
+}
+
+
+.content:last-child {
+  color: #16a085;
+  font-weight: 500;
+}
+
+.create-blog-bg {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    url('/jess.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.post-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f3);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.post-form:hover {
+  transform: translateY(-4px);
+}
+
+.post-form .form-heading {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-form label {
+  font-weight: 600;
+  color: #555;
+  margin-top: 10px;
+}
+
+.post-form input,
+.post-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.post-form button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #ff6347;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post-form button:hover {
+  background: #e65335;
+}
+.post-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+
+.view-btn {
+  background-color: #3498db;
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+}
+
+
+.edit-btn {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #d4ac0d;
+}
+
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
+.delete-form {
+  display: inline;
+}
+.show-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.show-card {
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.show-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.show-author {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.show-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.show-content {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.show-tags {
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.show-likes {
+  font-size: 1rem;
+  margin: 10px 0 20px;
+  color: #e74c3c;
+}
+
+.show-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.edit-btn {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #d4ac0d;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show In Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="show-page">
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png" alt="Blog Icon" class="nav-icon" />
+      <span class="brand-name">Blogger</span>
+    </div>
+    <div class="navbar-right">
+      <a href="/posts"><button class="create-btn">← Back to Posts</button></a>
+    </div>
+  </nav>
+
+  <main class="show-container">
+    <div class="show-card">
+      <% if (post.image) { %>
+        <img src="<%= post.image %>" alt="<%= post.title %>" class="show-image"/>
+      <% } %>
+
+      <h1 class="show-title"><%= post.title %></h1>
+      <p class="show-author">By <strong><%= post.author %></strong> | <%= new Date(post.date).toLocaleDateString() %></p>
+
+      <div class="show-content">
+        <p><%= post.content %></p>
+      </div>
+
+      <div class="show-tags">
+        <strong>Tags:</strong>
+        <% post.tags.forEach(tag => { %>
+          <span class="tag"><%= tag %></span>
+        <% }) %>
+      </div>
+
+      <div class="show-likes">
+        ❤️ <%= post.likes %> Likes
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

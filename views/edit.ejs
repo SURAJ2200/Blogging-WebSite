@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Post - <%= post.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="edit-page">
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png" alt="Blog Icon" class="nav-icon" />
+      <span class="brand-name">Blogger</span>
+    </div>
+    <div class="navbar-right">
+      <a href="/posts/<%= post._id %>"><button class="create-btn">← Back to Post</button></a>
+    </div>
+  </nav>
+
+  <main class="form-wrapper">
+      <form method="post" action="/posts/<%=post.id%>?_method=PATCH" class="post-form" >
+      <h2 class="form-heading">Edit Your Blog Post 📝</h2>
+
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" value="<%= post.title %>" required />
+
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author" value="<%= post.author %>" required />
+
+      <label for="content">Content</label>
+      <textarea name="content" id="content" rows="6" required><%= post.content %></textarea>
+
+      <label for="date">Date</label>
+     <input 
+  type="date" 
+  name="date" 
+  value="<%= post.date ? new Date(post.date).toISOString().split('T')[0] : '' %>" 
+  required 
+/>
+
+
+      <label for="tags">Tags</label>
+     <input type="text" name="tags" id="tags" value="<%= post.tags %>" required />
+
+      <label for="likes">Likes</label>
+      <input type="number" name="likes" id="likes" value="<%= post.likes %>" min="0" required />
+
+      <button type="submit">💾 Save Changes</button>
+    </form>
+  </main>
+
+</body>
+</html>
